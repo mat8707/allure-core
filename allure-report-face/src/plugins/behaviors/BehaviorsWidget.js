@@ -2,7 +2,7 @@ import WidgetStatusView from '../../components/widget-status/WidgetStatusView';
 
 export default class BehaviorsWidget extends WidgetStatusView {
     showLinks = false;
-    title = 'Features';
+    title = 'Scenariusze';
     baseUrl = 'behaviors';
-    showAllText = 'Show all user features';
+    showAllText = 'Pokaż wszystkie scenariusze';
 }

@@ -1,17 +1,17 @@
 <a class="pane__overlay" href="#behaviors"></a>
 <h2 class="pane__title">
-    Features overview
+    Scenariusze
 </h2>
 
 <div class="{{b "table" hover=true}}">
     <div class="{{b "table" "head"}}">
-        {{> ../../../blocks/table/sortable-col field="title" title="Title" class="behaviors-list__title"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.failed" title="Failed"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.broken" title="Broken"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.canceled" title="Canceled"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.pending" title="Pending"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.passed" title="Passed"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.total" title="Total" class="behaviors-list__total"}}
+        {{> ../../../blocks/table/sortable-col field="title" title="Nazwa" class="behaviors-list__title"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.failed" title="Negatywny"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.broken" title="Wstrzymany"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.canceled" title="Anulowany"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.pending" title="Wykonywany"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.passed" title="Pozytywny"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.total" title="#" class="behaviors-list__total"}}
     </div>
     {{#each features}}
         <div class="behaviors-list__feature">
