@@ -1,11 +1,11 @@
 {
-  "TEST_RUN": "Test run",
-  "STARTED_AT": "Started {{date}} at {{time}}",
-  "Title": "Title",
-  "Duration": "Duration",
+  "TEST_RUN": "TEST",
+  "STARTED_AT": "Uruchomiono {{date}} o {{time}}",
+  "Title": "Nazwa",
+  "Duration": "Czas trwania",
   "Status": "Status",
-  "Count": "Count",
-  "Defect": "Defect",
+  "Count": "#",
+  "Defect": "Błąd",
   "FAILED": "FAILED",
   "BROKEN": "BROKEN",
   "CANCELED": "CANCELED",
@@ -28,9 +28,9 @@
   "MINOR": "MINOR",
   "TRIVIAL": "TRIVIAL",
   "tooltip": {
-    "EXPAND": "Expand",
-    "COLLAPSE": "Collapse",
-    "CLOSE": "Close",
+    "EXPAND": "Rozwiń",
+    "COLLAPSE": "Zwiń",
+    "CLOSE": "Zamknij",
     "ATTACHMENT_IMAGE": "Attachment image"
   },
   "index": {

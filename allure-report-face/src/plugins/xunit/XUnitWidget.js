@@ -1,3 +1,4 @@
+/*
 import WidgetStatusView from '../../components/widget-status/WidgetStatusView';
 
 export default class XUnitWidget extends WidgetStatusView {
@@ -5,4 +6,4 @@ export default class XUnitWidget extends WidgetStatusView {
     baseUrl = 'xUnit';
     showAllText = 'Show all test suites';
 }
-
+*/
