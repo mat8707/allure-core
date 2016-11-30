@@ -3,7 +3,7 @@ import BehaviorsLayout from './BehaviorsLayout';
 import BehaviorsWidget from './BehaviorsWidget';
 
 allurePlugins.addTab('behaviors', {
-    title: 'Behaviors', icon: 'fa fa-list',
+    title: 'Scenariusze', icon: 'fa fa-list',
     route: 'behaviors(/:defectId)(/:testcaseId)(/:attachmentId)',
     onEnter: (...routeParams) => new BehaviorsLayout({routeParams})
 });
