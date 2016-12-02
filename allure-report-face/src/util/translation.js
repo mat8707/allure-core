@@ -3,9 +3,7 @@ import intervalPlural from 'i18next-intervalplural-postprocessor/lib';
 import settings from './settings';
 
 export const LANGUAGES = [
-    {id: 'en', title: 'English'},
-    {id: 'ru', title: 'Русский'},
-    {id: 'ptbr', title: 'Português'}
+    {id: 'en', title: 'Polski'}
 ];
 
 LANGUAGES
@@ -23,7 +21,7 @@ export function init() {
             interpolation: {
                 escapeValue: false
             },
-            fallbackLng: 'en'
+            fallbackLng: 'PL'
         });
 }
 

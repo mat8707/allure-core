@@ -4,9 +4,9 @@
         {{attachment.title}}
     </a>
     <span class="pane__controls">
-        <a class="fa fa-expand pane__expand" data-tooltip="Expand" href="#{{route.baseUrl}}/{{attachment.uid}}?expanded=true"></a>
-        <a class="fa fa-compress pane__collapse" data-tooltip="Collapse" href="#{{route.baseUrl}}/{{attachment.uid}}"></a>
-        <a class="fa fa-close" data-tooltip="Close" href="#{{route.baseUrl}}"></a>
+        <a class="fa fa-expand pane__expand" data-tooltip="Rozwiń" href="#{{route.baseUrl}}/{{attachment.uid}}?expanded=true"></a>
+        <a class="fa fa-compress pane__collapse" data-tooltip="Zwiń" href="#{{route.baseUrl}}/{{attachment.uid}}"></a>
+        <a class="fa fa-close" data-tooltip="Zamknij" href="#{{route.baseUrl}}"></a>
     </span>
 </h2>
 
@@ -36,13 +36,13 @@
     </div>
 {{else if (eq type "svg")}}
     <div class="pane__section">
-        <object class="attachment__embed" type="image/svg+xml" data="{{sourceUrl}}">Your browser does not support SVG</object>
+        <object class="attachment__embed" type="image/svg+xml" data="{{sourceUrl}}">Twoja przeglądarka nie wspiera SVG</object>
     </div>
 {{else if (eq type "video")}}
     <div class="pane__section attachment__media-container">
         <video class="attachment__media" controls>
             <source src="{{sourceUrl}}" type="{{attachment.type}}">
-            Your browser does not support video tag
+            Twoja przeglądarka nie wspiera plików video
         </video>
     </div>
 {{else if (eq type "uri")}}

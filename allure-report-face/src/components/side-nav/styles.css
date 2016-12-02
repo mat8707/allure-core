@@ -21,11 +21,13 @@
     text-decoration: none;
     display: block;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 30px;
     font-weight: bold;
-    background: url('allure-logo.png') no-repeat 10px center;
-    padding-left: 50px;
-    margin-bottom: 10px;
+/*	
+    background: url('cube_logo.png') no-repeat 25px center;
+*/	
+    padding-left: 10px;
+    margin-bottom: 0px;
     transition: all 0.3s;
   }
   
