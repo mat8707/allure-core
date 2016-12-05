@@ -1,8 +1,8 @@
 {
   "defects": {
     "TITLE": "Błędy",
-    "Product defects": "Product defects",
-    "Test defects": "Test ",
+    "Product defects": "Lista błędów",
+	"Test defects": "Test ",
     "STATISTIC": "(1)({{count}});(0,2-inf)({{count}});",
     "SHOW_ALL": "Pokaż wszystkie błędy",
     "COUNT": "#",
