@@ -22,15 +22,16 @@ class DefectsListView extends DataGridView {
         const defectId = this.$(e.currentTarget).data('uid');
         router.to('defects/' + defectId);
     }
+	
 
     serializeData() {
         return {
             sorting: this.getSettings(),
-            defectTypes: this.collection.toJSON().map(type =>
+            defectTypes: this.collection.toJSON().filter(defectTypes => defectTypes.status !=='BROKEN').map(type =>
                 Object.assign({}, type, {
                     defects: this.applySort(type.defects)
-                })
-            )
+                }
+            ))
         };
     }
 }
