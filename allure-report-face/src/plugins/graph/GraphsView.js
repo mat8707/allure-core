@@ -17,8 +17,8 @@ class GraphsView extends LayoutView {
             statistic: this.getStatusChartData(),
             showLegend: true
          }));
-        this.addChart('Severity', new SeverityChart({collection}));
-        this.addChart('Duration', new DurationChart({collection}));
+        this.addChart('Priorytet', new SeverityChart({collection}));
+        this.addChart('Czas trwania', new DurationChart({collection}));
     }
 
     addChart(name, chart) {
