@@ -37,7 +37,7 @@ function makeConfig(development) {
                 }
             }]
         },
-        devtool: development ? 'source-map' : null,
+        devtool:  'source-map',
         plugins: (() => {
             const plugins = [
                 new CopyWebpackPlugin([{from: './src/favicon.ico'}]),
@@ -46,7 +46,8 @@ function makeConfig(development) {
             if(development) {
                 return [...plugins, new webpack.HotModuleReplacementPlugin()];
             } else {
-                return [...plugins, new webpack.optimize.UglifyJsPlugin({compress: {unsafe: true}, comments: false})];
+                //return [...plugins, new webpack.optimize.UglifyJsPlugin({compress: {unsafe: true}, comments: false})];
+				return [...plugins];
             }
         })(),
         postcss: (webpack) => [
