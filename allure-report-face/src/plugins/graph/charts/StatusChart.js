@@ -6,8 +6,8 @@ import d3 from 'd3';
 import escape from '../../../util/escape';
 
 const legendTpl = `<div class="chart__legend">
-    ${['Failed', 'Broken', 'Canceled', 'Pending', 'Passed'].map((status) =>
-        `<p class="chart__legend-row" data-status="${status.toUpperCase()}"><span class="chart__legend-icon chart__legend-icon_status_${status.toUpperCase()}"></span> ${status}</p>`
+    ${[{en: 'FAILED', pl: 'Negatywny'}, {en: 'BROKEN', pl: 'Wstrzymany'}, {en: 'CANCELED', pl: 'Anulowany'}, {en: 'PENDING', pl: 'Wykonywany'}, {en: 'PASSED', pl: 'Pozytywny'}].map((status) =>
+        `<p class="chart__legend-row" data-status="${status.en.toUpperCase()}"><span class="chart__legend-icon chart__legend-icon_status_${status.en.toUpperCase()}"></span> ${status.pl}</p>`
     ).join('')}
 </div>`;
 
