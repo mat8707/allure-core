@@ -39,7 +39,7 @@ class GraphsView extends LayoutView {
             return stats;
         }, {
             total: this.collection.length,
-            failed: 0,
+			failed: 0,			
             broken: 0,
             canceled: 0,
             pending: 0,
