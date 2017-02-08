@@ -91,7 +91,7 @@ export default class StatusChart extends BaseChartView {
 
     getTooltipContent({data}) {
         return escape`
-            ${data.value} tests (${this.formatNumber(data.part * 100)}%)<br>
+            testów: ${data.value} (${this.formatNumber(data.part * 100)}%)<br>
             ${data.name}
         `;
     }
