@@ -25,8 +25,8 @@ export default class SeverityChart extends BaseChartView {
                 const testcases = this.collection.where({status, severity}).map(model => model.toJSON());
                 return {
                     value: testcases.length,
-                    testcases,
                     severity,
+					testcases,
                     status
                 };
             })
@@ -47,7 +47,16 @@ export default class SeverityChart extends BaseChartView {
         this.svg = this.setupViewport();
 
         this.makeAxis(this.svg.select('.chart__axis_x'), {
-            tickFormat: d => d.toLowerCase(),
+            tickFormat: d => {
+				const sevTxt = {
+					BLOCKER: 'bloker_pl',
+					CRITICAL: 'krytyk',
+					NORMAL: 'normalny',
+					MINOR: 'niski',
+					TRIVIAL: 'trywialny'
+				};
+				return sevTxt[d].toLowerCase();
+			},
             orient: 'bottom',
             scale: this.x
         }, {
