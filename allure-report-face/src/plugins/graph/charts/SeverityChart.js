@@ -56,7 +56,7 @@ export default class SeverityChart extends BaseChartView {
 					MINOR: 'Niski',
 					TRIVIAL: 'Trywialny'
 				};
-				return sevTxt[d].toLowerCase();
+				return sevTxt[d];
 			},
             orient: 'bottom',
             scale: this.x
@@ -111,10 +111,17 @@ export default class SeverityChart extends BaseChartView {
 			MINOR: 'Niski',
 			TRIVIAL: 'Trywialny'
 		};
+		const statTxt = {
+			FAILED: 'Negatywny',
+			BROKEN: 'Wstrzymany',
+			CANCELED: 'Anulowany',
+			PENDING: 'Wykonywany',
+			PASSED: 'Pozytywny'
+		};
         const LIST_LIMIT = 10;
         const items = testcases.slice(0, LIST_LIMIT);
         const overLimit = testcases.length - items.length;
-        return `<b>testów: ${value} ${sevTxt[severity].toLowerCase()} ${status.toLowerCase()}</b><br>` +
+        return `<b>testów: ${value}, ${sevTxt[severity].toLowerCase()}, ${statTxt[status].toLowerCase()}</b><br>` +
             `<ul class="popover__list">` +
                 items.map(testcase => escape`<li>${testcase.title}</li>`).join('') +
             `</ul>` +

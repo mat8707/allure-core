@@ -90,8 +90,16 @@ export default class StatusChart extends BaseChartView {
     }
 
     getTooltipContent({data}) {
+		const statTxt = {
+			FAILED: 'Negatywny',
+			BROKEN: 'Wstrzymany',
+			CANCELED: 'Anulowany',
+			PENDING: 'Wykonywany',
+			PASSED: 'Pozytywny'
+		};
         return escape`
             testów: ${data.value} (${this.formatNumber(data.part * 100)}%)<br>
+			${statTxt[data.name].toLowerCase()}
         `;
     }
 
