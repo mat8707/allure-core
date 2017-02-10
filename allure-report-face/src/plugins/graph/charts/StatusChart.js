@@ -92,7 +92,7 @@ export default class StatusChart extends BaseChartView {
     getTooltipContent({data}) {
         return escape`
             testów: ${data.value} (${this.formatNumber(data.part * 100)}%)<br>
-        ;
+        `;
     }
 
     @on('mouseleave .chart__legend-row')

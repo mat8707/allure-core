@@ -49,11 +49,12 @@ export default class SeverityChart extends BaseChartView {
         this.makeAxis(this.svg.select('.chart__axis_x'), {
             tickFormat: d => {
 				const sevTxt = {
-					BLOCKER: 'bloker_pl',
-					CRITICAL: 'krytyk',
-					NORMAL: 'normalny',
-					MINOR: 'niski',
-					TRIVIAL: 'trywialny'
+
+					BLOCKER: 'Bloker',
+					CRITICAL: 'Krytyczny',
+					NORMAL: 'Normalny',
+					MINOR: 'Niski',
+					TRIVIAL: 'Trywialny'
 				};
 				return sevTxt[d].toLowerCase();
 			},
@@ -103,10 +104,17 @@ export default class SeverityChart extends BaseChartView {
 
 
     getTooltipContent({value, severity, status, testcases}) {
+		const sevTxt = {
+			BLOCKER: 'Bloker',
+			CRITICAL: 'Krytyczny',
+			NORMAL: 'Normalny',
+			MINOR: 'Niski',
+			TRIVIAL: 'Trywialny'
+		};
         const LIST_LIMIT = 10;
         const items = testcases.slice(0, LIST_LIMIT);
         const overLimit = testcases.length - items.length;
-        return `<b>${value} ${severity.toLowerCase()} test cases ${status.toLowerCase()}</b><br>` +
+        return `<b>testów: ${value} ${sevTxt[severity].toLowerCase()} ${status.toLowerCase()}</b><br>` +
             `<ul class="popover__list">` +
                 items.map(testcase => escape`<li>${testcase.title}</li>`).join('') +
             `</ul>` +
