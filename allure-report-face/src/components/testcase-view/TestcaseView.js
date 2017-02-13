@@ -56,8 +56,16 @@ class TestcaseView extends LayoutView {
     }
 
     serializeData() {
+		const sevTxt = {
+			BLOCKER: 'BLOKER',
+			CRITICAL: 'KRYTYCZNY',
+			NORMAL: 'NORMALNY',
+			MINOR: 'NISKI',
+			TRIVIAL: 'TRYWIALNY'
+		};
         return Object.assign({
-            severityIcon: SEVERITY_ICONS[this.model.get('severity')],
+			severityPL: sevTxt[this.model.get('severity')],
+			severityIcon: SEVERITY_ICONS[this.model.get('severity')],
             route: {
                 baseUrl: this.options.baseUrl
             }
