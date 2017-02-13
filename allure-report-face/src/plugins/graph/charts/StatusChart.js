@@ -64,7 +64,7 @@ export default class StatusChart extends BaseChartView {
         this.svg.select('.chart__plot').append('text')
             .classed('chart__caption', true)
             .attr({dy: '0.4em'})
-            .style({'font-size': radius / 3})
+            .style({'font-size': (radius / 3)+'px'})
             .text(this.getChartTitle());
 
         if(this.firstRender) {
