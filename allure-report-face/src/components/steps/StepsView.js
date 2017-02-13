@@ -16,8 +16,16 @@ export default class StepsView extends ItemView {
     }
 
     serializeData() {
+		const statTxt = {
+			FAILED: 'NEGATYWNY',
+			BROKEN: 'WSTRZYMANY',
+			CANCELED: 'ANULOWANY',
+			PENDING: 'WYKONYWANY',
+			PASSED: 'POZYTYWNY'
+		};
         return {
-            status: this.model.get('status'),
+			
+            status: statTxt[this.model.get('status')],
             time: this.model.get('time'),
             steps: this.model.get('steps').map(this.fillStep, this),
             baseUrl: this.options.baseUrl,
