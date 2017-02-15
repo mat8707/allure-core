@@ -47,7 +47,7 @@ export default class StatusChart extends BaseChartView {
         if(this.options.showLegend) {
             leftOffset -= 70;
         }
-        this.$el.height(radius * 2);
+        this.$el.height(radius * 1.5);
         this.arc.innerRadius(0.8 * radius).outerRadius(radius);
 
         this.svg = this.setupViewport();
