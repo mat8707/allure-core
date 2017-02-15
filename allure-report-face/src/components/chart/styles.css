@@ -6,6 +6,7 @@
   margin-top: $gap-size;
   position: relative;
   flex: 1;
+  height: 93%;
   &__title {
     margin-top: 0;
     margin-bottom: $gap-size;
@@ -16,7 +17,7 @@
   }
   &__svg {
     width: 100%;
-    height: 100%;
+    height: 133%;
   }
   &__wrap {
     width: 50%;
