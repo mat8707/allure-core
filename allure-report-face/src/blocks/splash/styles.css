@@ -2,10 +2,13 @@
     margin: auto;
     text-align: center;
     &__title {
-        font-size: 3.5em;
-        line-height: 1;
+        font-size: 4em;
+		position: relative;
+		left: -1%;
     }
     &__subtitle {
         color: $text-muted-color;
+		position: relative;
+		left: 0%;
     }
 }
