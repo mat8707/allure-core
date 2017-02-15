@@ -31,6 +31,7 @@
 
 .graph-widget {
     &__chart {
-        padding: 1em 0;
+        position: relative;
+		top: -56px;
     }
 }
