@@ -5,14 +5,24 @@ import template from './GraphWidget.hbs';
 
 export default class GraphWidget extends LayoutView {
     template = template;
-
+	
     @region('.graph-widget__chart')
     chart;
-
+	
     onShow() {
         this.chart.show(new StatusChart({
             statistic: this.model.get('statistic'),
             showLegend: false
         }));
+    }
+	
+	serializeData() {
+		var today = new Date();
+        return {
+            statistic: this.model.get('statistic'),
+            showLegend: false,
+			time: this.model.get('time'),
+            currentDate: today
+        };
     }
 }
