@@ -18,9 +18,9 @@ export default class StepsView extends ItemView {
     serializeData() {
 		const statTxt = {
 			FAILED: 'NEGATYWNY',
-			BROKEN: 'WSTRZYMANY',
+			BROKEN: 'WSTRZYMANY (nie używany)',
 			CANCELED: 'ANULOWANY',
-			PENDING: 'WYKONYWANY',
+			PENDING: 'WSTRZYMANY',
 			PASSED: 'POZYTYWNY'
 		};
         return {

@@ -10,13 +10,13 @@
     background: $background-passed;
   }
   &_status_PENDING {
-    background: $background-pending;
+    background: $background-broken;
   }
   &_status_CANCELED {
     background: $background-canceled;
   }
   &_status_BROKEN {
-    background: $background-broken;
+    background: $background-pending;
   }
   &_status_FAILED {
     background: $background-failed;

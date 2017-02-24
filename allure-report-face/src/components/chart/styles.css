@@ -39,13 +39,13 @@
       fill: $color-failed
     }
     &_status_BROKEN {
-      fill: $color-broken;
+      fill: $color-pending;
     }
     &_status_PASSED {
       fill: $color-passed;
     }
     &_status_PENDING {
-      fill: $color-pending;
+      fill: $color-broken;
     }
     &_status_CANCELED {
       fill: $color-canceled;

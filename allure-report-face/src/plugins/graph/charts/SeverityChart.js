@@ -113,9 +113,9 @@ export default class SeverityChart extends BaseChartView {
 		};
 		const statTxt = {
 			FAILED: 'Negatywny',
-			BROKEN: 'Wstrzymany',
+			BROKEN: 'Wstrzymany (nie używany)',
 			CANCELED: 'Anulowany',
-			PENDING: 'Wykonywany',
+			PENDING: 'Wstrzymany',
 			PASSED: 'Pozytywny'
 		};
         const LIST_LIMIT = 10;

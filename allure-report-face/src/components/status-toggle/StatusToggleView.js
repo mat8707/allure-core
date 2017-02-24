@@ -10,8 +10,9 @@ class StatusToggleView extends ItemView {
 
     serializeData() {
         const statuses = settings.get('visibleStatuses');
+		//poniżej zakomentowany kod dla wszystkich statusów. Do testów potrzebne tylko statusy: PASSED, FAILED, PENDING, CANCELED. Pierwotnie było: [{en: 'FAILED', pl: 'Negatywny'}, {en: 'BROKEN', pl: 'WSTRZYMANY (nie używany)'}, {en: 'CANCELED', pl: 'ANULOWANY'}, {en: 'PENDING', pl: 'WSTRZYMANY'}, {en: 'PASSED', pl: 'POZYTYWNY'}]
         return {
-            statuses: [{en: 'FAILED', pl: 'Negatywny'}, {en: 'BROKEN', pl: 'WSTRZYMANY'}, {en: 'CANCELED', pl: 'ANULOWANY'}, {en: 'PENDING', pl: 'WYKONYWANY'}, {en: 'PASSED', pl: 'POZYTYWNY'}].map(status => ({
+            statuses: [{en: 'PASSED', pl: 'POZYTYWNY'}, {en: 'FAILED', pl: 'NEGATYWNY'}, {en: 'PENDING', pl: 'WSTRZYMANY'}, {en: 'CANCELED', pl: 'ANULOWANY'}].map(status => ({
                 status: status.en,
                 active: !!statuses[status.en],
                 title: capitalize(status.pl.toLowerCase())

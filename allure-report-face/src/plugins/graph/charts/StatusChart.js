@@ -5,8 +5,11 @@ import {omit} from 'underscore';
 import d3 from 'd3';
 import escape from '../../../util/escape';
 
+//poniżej zakomentowany kod dla wszystkich statusów. Do testów potrzebne tylko statusy: PASSED, FAILED, PENDING, CANCELED
+//[{en: 'FAILED', pl: 'Negatywny'}, {en: 'BROKEN', pl: 'Wstrzymany'}, {en: 'CANCELED', pl: 'Anulowany'}, {en: 'PENDING', pl: 'Wykonywany'}, {en: 'PASSED', pl: 'Pozytywny'}]
+
 const legendTpl = `<div class="chart__legend">
-    ${[{en: 'FAILED', pl: 'Negatywny'}, {en: 'BROKEN', pl: 'Wstrzymany'}, {en: 'CANCELED', pl: 'Anulowany'}, {en: 'PENDING', pl: 'Wykonywany'}, {en: 'PASSED', pl: 'Pozytywny'}].map((status) =>
+	${[{en: 'PASSED', pl: 'Pozytywny'}, {en: 'FAILED', pl: 'Negatywny'}, {en: 'PENDING', pl: 'Wstrzymany'}, {en: 'CANCELED', pl: 'Anulowany'}].map((status) =>
         `<p class="chart__legend-row" data-status="${status.en.toUpperCase()}"><span class="chart__legend-icon chart__legend-icon_status_${status.en.toUpperCase()}"></span> ${status.pl}</p>`
     ).join('')}
 </div>`;
@@ -92,9 +95,9 @@ export default class StatusChart extends BaseChartView {
     getTooltipContent({data}) {
 		const statTxt = {
 			FAILED: 'Negatywny',
-			BROKEN: 'Wstrzymany',
+			BROKEN: 'Wstrzymany (nie używany)',
 			CANCELED: 'Anulowany',
-			PENDING: 'Wykonywany',
+			PENDING: 'Wstrzymany',
 			PASSED: 'Pozytywny'
 		};
         return escape`

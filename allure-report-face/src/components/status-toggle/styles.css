@@ -22,13 +22,13 @@
       background: $color-canceled;
     }
     &_status_PENDING::before {
-      background: $color-pending;
+      background: $color-broken;
     }
     &_status_FAILED::before {
       background: $color-failed;
     }
     &_status_BROKEN::before {
-      background: $color-broken;
+      background: $color-pending;
     }
   }
 }

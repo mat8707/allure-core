@@ -10,8 +10,8 @@ describe('StatusToggle', function() {
 
     it('should render buttons according to settings', function() {
         expect([...this.el.find('.button')].map(button => button.textContent))
-            .toEqual(['Negatywny', 'Wstrzymany', 'Anulowany', 'Wykonywany', 'Pozytywny']);
-        expect([...this.el.find('.button_active')].map(button => button.textContent)).toEqual(['Negatywny', 'Wstrzymany']);
+            .toEqual(['Pozytywny', 'Negatywny', 'Wstrzymany', 'Anulowany']);
+        expect([...this.el.find('.button_active')].map(button => button.textContent)).toEqual(['Negatywny']);
     });
 
     it('should update model on click', function() {

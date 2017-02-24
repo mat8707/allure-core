@@ -8,12 +8,12 @@
     background: $color-canceled;
   }
   &_status_PENDING {
-    background: $color-pending;
+    background: $color-broken;
   }
   &_status_FAILED {
     background: $color-failed;
   }
   &_status_BROKEN {
-    background: $color-broken;
+    background: $color-pending;
   }
 }

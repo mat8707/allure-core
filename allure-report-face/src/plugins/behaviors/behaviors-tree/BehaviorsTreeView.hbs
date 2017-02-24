@@ -6,11 +6,11 @@
 <div class="{{b "table" hover=true}}">
     <div class="{{b "table" "head"}}">
         {{> ../../../blocks/table/sortable-col field="title" title="Nazwa" class="behaviors-list__title"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.failed" title="Negatywny"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.broken" title="Wstrzymany"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.canceled" title="Anulowany"}}
-        {{> ../../../blocks/table/sortable-col field="statistic.pending" title="Wykonywany"}}
         {{> ../../../blocks/table/sortable-col field="statistic.passed" title="Pozytywny"}}
+		{{> ../../../blocks/table/sortable-col field="statistic.failed" title="Negatywny"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.pending" title="Wstrzymany"}}
+        {{> ../../../blocks/table/sortable-col field="statistic.canceled" title="Anulowany"}}
+		<!--{{> ../../../blocks/table/sortable-col field="statistic.broken" title="Wstrzymany"}}-->
         {{> ../../../blocks/table/sortable-col field="statistic.total" title="#" class="behaviors-list__total"}}
     </div>
     {{#each features}}
